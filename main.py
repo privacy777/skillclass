@@ -10,6 +10,9 @@ def skillcourse(url):
         url (str): your course link, with only the courses' digits at the end or it won't work (i will fix it dw)
     """
 
+    if not os.path.exists(f'{path}/Downloaded'): # Make download folder if it doesn't exist
+        os.mkdir(f'{path}/Downloaded')
+
     with requests.get(f'https://skillshare-api--heckernohecking.repl.co/{url}') as r: #requesting the API, with is used so that it closes after the requests automatically.
 
         data = r.text #data is basically the answer of the page, we'll use this data at out advantage
@@ -17,6 +20,13 @@ def skillcourse(url):
     json_data = json.loads(data) #since data is in JSON format, we'll load it to pick the elements we need
 
     vidsnumber = data.count('title') #for each "title" of videos in the course, it's 1 more video to download after each one. we'll use this later on
+
+    name = json_data['class'] #the name of the course is the name of the course
+
+    print(f'>> Downloading {name}...') #we print the name of the course
+
+    os.mkdir(f'{path}/Downloaded/{slugify(name)}') #we create a folder for the course, with the name of the course, encoded so no crash
+
 
     for i in range(vidsnumber): #for the numbers of videos
 
@@ -26,7 +36,7 @@ def skillcourse(url):
 
         print(title,'\n') 
 
-        wget.download(url, out=f'{path}/Downloaded/{slugify(title)}.mp4') #we download the video, in the current users's path, in the downloaded folder with it's title encoded so no crash
+        wget.download(url, out=f'{path}/Downloaded/{slugify(name)}/{slugify(title)}.mp4') #we download the video, in the current users's path, in the downloaded folder with it's title encoded so no crash
 
         print('\n') #line skipping
 
@@ -39,4 +49,4 @@ if __name__=="__main__":
 
     skillcourse(url)
 
-    print('\n>>Done')
+    print('\n> >Done')

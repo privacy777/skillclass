@@ -7,7 +7,10 @@ Download every skillshare class you want. (thanks to HeckerNoHecking's api)
 ## Features
 
 - Download all your skillshare courses for free
-- File Names are encoded so you can download them without any errors
+- Multiple Links now supported !
+- Auto file-folder creation
+- Simple error handling : will pass if one link is invalid in the list
+- File Names are encoded so you can download the videos without any errors
 - Easy to use
 - No manual clicks needed.
 

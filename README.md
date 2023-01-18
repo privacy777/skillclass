@@ -28,12 +28,6 @@ First install python 3+, then run this command before running the "main.py" scri
 
 Basically, HeckerNoHecking's allows us to get the JSON data with the titles and url of any skillshare courses. So this tool automates the download of each file, so you can watch all your courses for free !
 
-#### Can i delete the "Downloaded" folder
-
-No, not at the moment, unless u "mod" it to your convenience, i made this little project and i will update it soon. DO not hesitate to notify me on the thread on what i could do, or commit changes to the code and upload them to me. thanks !
-
-
-
 ## Roadmap
 
 - More "flexibility" over the link

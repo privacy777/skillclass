@@ -3,7 +3,10 @@
 
 Download every skillshare class you want. (thanks to HeckerNoHecking's api)
 
-
+## Important notice : current status
+- Unfortunately, HeckerNohecking posted on replit that his api was not available publicly anymore, possibly implying legal actions from skillshare, or maybe just lack of time to maintain the project.
+- This means that the project is currently NOT working, until I find another alternative.
+- Thank you for the support, this was the first time my project actually got more or less 10 stars, and a contributor :)
 ## Features
 
 - Download all your skillshare courses for free
